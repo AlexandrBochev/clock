@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.active {
+  background-color: #ff0000;
+}
+
+.clock{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../public/Clock.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    z-index: 20;
+  }
+}
+
+.hour {
+  position: absolute;
+  .hours {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 60px;
+      width: 6px;
+      background-color: #ff0000;
+      z-index: 10;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+}
+
+.minute {
+  position: absolute;
+  .minutes {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 80px;
+      width: 4px;
+      background-color: #000;
+      z-index: 11;
+      border-radius: 2px;
+    }
+  }
+}
+
+.second {
+  position: absolute;
+  .seconds {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 120px;
+      width: 2px;
+      background-color: #909090;
+      z-index: 9;
+      border-radius: 2px;
+    }
+  }
+}
